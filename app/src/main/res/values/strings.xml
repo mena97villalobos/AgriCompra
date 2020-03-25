@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AgriCompra</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wallpaper">Wallpaper</string>
+    <string name="logo_agri_compra">Logo AgriCompra</string>
+    <string name="login_string">Iniciar Sesión</string>
+</resources>

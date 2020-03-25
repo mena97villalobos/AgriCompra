@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "826385071779",
+    "firebase_url": "https://agricompras-5953d.firebaseio.com",
+    "project_id": "agricompras-5953d",
+    "storage_bucket": "agricompras-5953d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826385071779:android:c29eaefdd5c98e7d520916",
+        "android_client_info": {
+          "package_name": "com.byteme.agricompra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826385071779-undehg480lpd87rj2lkleof87uq180ra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF-iUWsoKM3NCyxPVE0rPH1u7S6vRwkT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826385071779-undehg480lpd87rj2lkleof87uq180ra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
