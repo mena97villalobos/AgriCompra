@@ -4,4 +4,8 @@
     <string name="wallpaper">Wallpaper</string>
     <string name="logo_agri_compra">Logo AgriCompra</string>
     <string name="login_string">Iniciar Sesión</string>
+    <string name="my_bills">Mis Pedidos</string>
+    <string name="buy">Comprar!</string>
+    <string name="go_market">Ir al Mercado!</string>
+    <string name="no_hay_elementos_disponibles">No hay elementos disponibles</string>
 </resources>

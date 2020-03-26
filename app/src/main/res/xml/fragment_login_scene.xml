@@ -13,7 +13,7 @@
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/logo_agri_compra"
             motion:layout_constraintBottom_toTopOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintEnd_toEndOf="@id/wallpaper"
             motion:layout_constraintStart_toStartOf="parent"
             android:alpha="0.0" />
 
@@ -58,7 +58,7 @@
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/logo_agri_compra"
             motion:layout_constraintBottom_toBottomOf="@+id/wallpaper"
-            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintEnd_toEndOf="@id/wallpaper"
             motion:layout_constraintStart_toStartOf="parent"
             android:alpha="1.0"
             />

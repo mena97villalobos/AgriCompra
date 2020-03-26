@@ -9,7 +9,7 @@
         android:id="@+id/loginFragment"
         android:name="com.byteme.agricompra.ui.login.LoginFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/fragment_login"
+        tools:layout="@layout/login_fragment"
         >
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
@@ -19,5 +19,39 @@
         android:id="@+id/homeFragment"
         android:name="com.byteme.agricompra.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_marketFragment"
+            app:destination="@id/marketFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="com.byteme.agricompra.ui.market.MarketFragment"
+        android:label="market_fragment"
+        tools:layout="@layout/market_fragment" >
+        <action
+            android:id="@+id/action_marketFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.byteme.agricompra.ui.orders.OrdersFragment"
+        android:label="OrdersFragment"
+        tools:layout="@layout/orders_fragment">
+        <action
+            android:id="@+id/action_ordersFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

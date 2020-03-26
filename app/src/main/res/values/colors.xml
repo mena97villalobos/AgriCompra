@@ -6,8 +6,10 @@
     <color name="colorSecondaryDark">#668721</color>
     <color name="colorAccent">#323335</color>
     <color name="black">#323335</color>
+    <color name="light_black">#444444</color>
+    <color name="blue">#0AA3B1</color>
     <color name="red">#D63131</color>
     <color name="orange">#D67B31</color>
     <color name="green">#07BC0A</color>
-    <color name="grey">#777A7F</color>
+    <color name="gray">#777A7F</color>
 </resources>

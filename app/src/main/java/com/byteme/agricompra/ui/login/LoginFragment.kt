@@ -8,13 +8,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.byteme.agricompra.R
-import com.byteme.agricompra.databinding.FragmentLoginBinding
+import com.byteme.agricompra.databinding.LoginFragmentBinding
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
@@ -28,7 +27,7 @@ class LoginFragment : Fragment() {
     }
 
     private val viewModel: LoginViewModel by viewModels()
-    private lateinit var binding : FragmentLoginBinding
+    private lateinit var binding : LoginFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +36,7 @@ class LoginFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_login,
+            R.layout.login_fragment,
             container,
             false
         )
