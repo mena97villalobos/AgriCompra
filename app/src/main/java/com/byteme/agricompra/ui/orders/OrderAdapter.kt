@@ -1,4 +1,4 @@
-package com.byteme.agricompra.ui.market
+package com.byteme.agricompra.ui.orders
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,15 +8,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.byteme.agricompra.R
-import com.byteme.agricompra.databinding.ProductCardLayoutBinding
-import com.byteme.agricompra.ui.market.model.Product
+import com.byteme.agricompra.databinding.OrderCardLayoutBinding
+import com.byteme.agricompra.ui.orders.model.Order
 
-
-class ProductAdapter(
-    private val clickListener: ProductListener,
+class OrderAdapter (
+    private val clickListener: OrderListener,
     private val context: Context
 ) :
-    ListAdapter<Product, ProductAdapter.ViewHolder>(ProductDiffCallback()) {
+    ListAdapter<Order, OrderAdapter.ViewHolder>(OrderDiffCallback()) {
 
 
     /**
@@ -38,7 +37,7 @@ class ProductAdapter(
     /**
      * Creates class for each element to be rendered
      */
-    class ViewHolder private constructor(private val binding: ProductCardLayoutBinding) :
+    class ViewHolder private constructor(private val binding: OrderCardLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         /**
@@ -48,7 +47,7 @@ class ProductAdapter(
 
             fun from(parent: ViewGroup): ViewHolder =
                 ViewHolder(
-                    ProductCardLayoutBinding.inflate(
+                    OrderCardLayoutBinding.inflate(
                         LayoutInflater.from(parent.context),
                         parent,
                         false
@@ -59,9 +58,9 @@ class ProductAdapter(
         /**
          * Binds objects to view
          */
-        fun bind(item: Product, clickListener: ProductListener) {
-            binding.product = item
+        fun bind(order: Order, clickListener: OrderListener) {
             binding.clickListener = clickListener
+            binding.orderName.text = order.title
             binding.executePendingBindings()
         }
     }
@@ -72,13 +71,13 @@ class ProductAdapter(
 /**
  * Creates class to updateReceipt RecyclerView
  */
-class ProductDiffCallback : DiffUtil.ItemCallback<Product>() {
+class OrderDiffCallback : DiffUtil.ItemCallback<Order>() {
 
-    override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean =
-        oldItem.title == newItem.title &&  oldItem.cost == newItem.cost
+    override fun areItemsTheSame(oldItem: Order, newItem: Order): Boolean =
+        oldItem.title == newItem.title
 
 
-    override fun areContentsTheSame(oldItem: Product, newItem: Product): Boolean =
+    override fun areContentsTheSame(oldItem: Order, newItem: Order): Boolean =
         oldItem == newItem
 }
 
@@ -86,8 +85,8 @@ class ProductDiffCallback : DiffUtil.ItemCallback<Product>() {
 /**
  * Creates click listener for each item of the Recycler View
  */
-class ProductListener(val clickListener: (product: Product) -> Unit) {
+class OrderListener(val clickListener: () -> Unit) {
 
-    fun onClick(product: Product) = clickListener(product)
+    fun onClick() = clickListener()
 
 }

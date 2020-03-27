@@ -5,12 +5,8 @@
 
     <data>
         <variable
-            name="product"
-            type="com.byteme.agricompra.ui.market.model.Product" />
-
-        <variable
             name="clickListener"
-            type="com.byteme.agricompra.ui.market.ProductListener" />
+            type="com.byteme.agricompra.ui.orders.OrderListener" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -21,51 +17,37 @@
         app:cardCornerRadius="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/product_card"
+            android:id="@+id/order_card"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:onClick="@{() -> clickListener.onClick(product)}">
+            android:onClick="@{() -> clickListener.onClick()}">
 
 
             <ImageView
-                android:id="@+id/product_image"
+                android:id="@+id/image"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginBottom="16dp"
                 android:layout_weight="1"
-                app:layout_constraintBottom_toTopOf="@+id/product_name"
+                app:layout_constraintBottom_toTopOf="@+id/order_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:setSRC="@{product.icon}"
-                tools:srcCompat="@drawable/ic_apple" />
+                app:srcCompat="@drawable/ic_order" />
 
             <TextView
-                android:id="@+id/product_name"
+                android:id="@+id/order_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_weight="1"
-                android:text="@{product.title}"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:text="Title" />
-
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="@{product.cost}"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:text="500" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.byteme.agricompra.R
 import com.byteme.agricompra.databinding.MarketFragmentBinding
 import com.byteme.agricompra.ui.market.model.Product
@@ -37,12 +38,14 @@ class MarketFragment : Fragment() {
     private fun configureProductList() {
         val adapter = ProductAdapter(
             ProductListener {
-                // TODO open buy view
+                findNavController().navigate(
+                    MarketFragmentDirections.actionMarketFragmentToBuyFragment()
+                )
             },
             context!!
         )
 
-        val productList = listOf<Product>(
+        val productList = listOf(
             Product("Manzanas", "500", R.drawable.ic_apple),
             Product("Aguacate", "500", R.drawable.ic_avocado),
             Product("Arandanos", "500", R.drawable.ic_blueberry),

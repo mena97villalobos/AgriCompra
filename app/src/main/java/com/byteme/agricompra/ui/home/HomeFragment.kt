@@ -19,7 +19,7 @@ class HomeFragment : Fragment() {
 
     private val itemAdapter by lazy {
         ItemAdapter { position: Int, _: Item ->
-            Toast.makeText(context, "Pos $position", Toast.LENGTH_LONG).show()
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToBuyFragment())
             item_list.smoothScrollToPosition(position)
         }
     }
